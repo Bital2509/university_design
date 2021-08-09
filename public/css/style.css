@@ -40,180 +40,246 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 100px;
-  border-bottom: 1px #888b8e solid;
+  border-bottom: 1px #999999 solid;
+  position: relative;
 }
-header .menu {
+header .hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+header .hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #999999;
+  transition: all 0.5s ease;
+}
+header .hamburger span:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #999999;
+  transition: all 0.5s ease;
+}
+header .hamburger span:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #999999;
+  transition: all 0.5s ease;
+}
+header .hamburger__active {
+  transition: all 0.5s ease;
+}
+header .hamburger__active span {
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  background: #006633;
+}
+header .hamburger__active span:before {
+  transform: rotate(90deg);
+  top: 0;
+  transition: all 0.5s ease;
+  background: #006633;
+}
+header .hamburger__active span:after {
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background: #006633;
+}
+header .l-menu {
+  margin-left: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 45%;
 }
-header .menu a {
-  font-size: 14px;
+header .l-menu .logo {
+  width: 350px;
+}
+header .l-menu .link {
+  display: flex;
+  align-items: center;
+}
+header .l-menu .link a {
   font-family: Montserrat;
-  color: #888b8e;
+  font-size: 16px;
+  margin: 0 24px;
+  color: #999999;
+  font-weight: 500;
+  border-bottom: 1px rgba(0, 0, 0, 0) solid;
+  transition: all 0.5s ease;
 }
-header .additional-links {
-  width: 35%;
+header .l-menu .link a:hover {
+  color: #006633;
+  border-bottom: 1px #006633 solid;
+  transition: all 0.5s ease;
+}
+header .r-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-left: auto;
 }
-header .additional-links .social-network {
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header .r-menu a {
+  margin: 0 12px;
 }
-header .additional-links .social-network a {
+header .r-menu a img {
   width: 35px;
   height: 35px;
 }
-header .additional-links .social-network a img {
-  width: 100%;
-}
-header .additional-links .language {
-  font-family: Montserrat;
-  color: #888b8e;
-}
-header .additional-links .eye {
-  width: 45px;
-}
-header .additional-links .search {
-  width: 25px;
-  height: 25px;
-}
-header .additional-links .search img {
-  width: 100%;
-}
-
-.second-header {
-  width: 100%;
+header .r-menu .language {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 100px;
-}
-.second-header__block {
-  margin: 48px 0 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.second-header__block .logo {
-  width: 500px;
-}
-.second-header__block .logo img {
-  width: 100%;
-}
-.second-header__block .contact {
-  width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.second-header__block .contact__block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.second-header__block .contact__block span {
-  font-family: Montserrat;
-  font-size: 14px;
-  color: #888b8e;
-  opacity: 0.7;
-}
-.second-header__block .drop-down-menu {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-}
-.second-header__block .drop-down-menu a {
-  font-family: Montserrat;
-  font-weight: bold;
-  color: black;
+  position: relative;
   cursor: pointer;
+  margin: 0 12px;
 }
-.second-header__block .drop-down-menu ul {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header .r-menu .language span {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 500;
+}
+header .r-menu .language a {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 500;
   margin: 0;
-  padding: 0;
 }
-.second-header__block .drop-down-menu ul li {
-  height: 100%;
-  list-style-type: none;
-  padding: 6px;
+header .r-menu .language img {
+  width: 15px;
+  margin-left: 6px;
+}
+header .r-menu .language .language-friend {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.second-header__block .drop-down-menu ul li .link {
-  transition-delay: 0.2s;
-  border-bottom: 0;
-}
-.second-header__block .drop-down-menu ul li .drop-item {
   position: absolute;
-  left: 0;
-  top: 285px;
-  transform: scaleY(0);
+  top: 100%;
   transform-origin: top;
+  transform: scaleY(0);
+  transition: all 0.2s ease;
   width: 100%;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  transition-delay: 0.2s;
-  background: white;
-  opacity: 0;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  padding: 0 100px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 24px;
-  z-index: 0;
 }
-.second-header__block .drop-down-menu ul li .drop-item__column {
-  grid-column-end: span 3;
+header .r-menu .language .language-friend a {
+  color: white;
+  margin: 6px 0;
+}
+header .r-menu .language .language-friend__active {
+  transform: scaleY(1);
+  transition: all 0.2s ease;
+  background: #999999;
+}
+header .menu {
+  width: 100%;
+  transform-origin: top;
+  transform: scaleY(0);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 100px;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0);
+  background: white;
+  border-top: 1px #999999 solid;
+  display: flex;
+  justify-content: space-between;
+}
+header .menu .l-menu {
+  margin: 0;
+  width: 26%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 100%;
-  width: 300px;
+  padding: 12px;
+  border-right: 1px #999999 solid;
 }
-.second-header__block .drop-down-menu ul li .drop-item__column .column__title {
-  font-size: 16px;
+header .menu .l-menu .l-menu-item {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .menu .l-menu .l-menu-item a {
   font-family: Montserrat;
-  font-weight: bold;
-  color: #95c11f;
-  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
 }
-.second-header__block .drop-down-menu ul li .drop-item__column a {
+header .menu .l-menu .l-menu-item img {
+  width: 15px;
+}
+header .menu .r-menu {
+  width: 20%;
+  margin: 0;
+  background: white;
+  border-left: 1px #999999 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+header .menu .r-menu .r-menu-item {
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .menu .r-menu .r-menu-item .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+header .menu .r-menu .r-menu-item .contact .name {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+header .menu .r-menu .r-menu-item .contact .phone {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
   color: #006633;
-  margin: 6px 0;
-  font-weight: normal;
+  margin: 12px 0;
+  padding: 0;
 }
-.second-header__block .drop-down-menu ul li:hover .link {
-  color: #95c11f;
-  border-bottom: 2px #95c11f solid;
-  transition: all 0.1s ease;
+header .menu .r-menu .r-menu-item .contact .email {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  color: #006633;
+  padding: 0;
 }
-.second-header__block .drop-down-menu ul li:hover .drop-item {
+header .menu__active {
   transform: scaleY(1);
-  transition-delay: 0.5s;
-  opacity: 1;
-  box-shadow: 0 5px 10px 0 rgba(128, 128, 128, 0.1), 0 -5px 10px 0 rgba(128, 128, 128, 0.1);
-  padding: 24px 100px;
-  z-index: 2;
+  z-index: 15;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .section {

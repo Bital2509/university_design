@@ -1,3 +1,10 @@
+$('#hamburger').click(function () {
+    $('#hamburger').toggleClass('hamburger__active')
+    $('#menu').toggleClass('menu__active')
+})
+$('#language').click(function () {
+    $('#language-friend').toggleClass('language-friend__active')
+})
 $('#news-button-one').click(function () {
     $('#news-button-one').addClass('menu__button-active')
     $('#news-button-two').removeClass('menu__button-active')
