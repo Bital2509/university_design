@@ -9,7 +9,7 @@ var swiperOne = new Swiper("#swiper-one", {
     },
     loop: true,
 });
-var swiperTwo = new Swiper("#swiper-two", {
+/*var swiperTwo = new Swiper("#swiper-two", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -20,7 +20,7 @@ var swiperTwo = new Swiper("#swiper-two", {
     },
     loop: true,
     spaceBetween: 30,
-});
+});*/
 var swiperThree = new Swiper("#swiper-three", {
     navigation: {
         nextEl: ".swiper-button-next",

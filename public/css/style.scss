@@ -59,9 +59,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
     height: 30px;
     cursor: pointer;
+    margin-right: 24px;
 
     span {
       position: absolute;
@@ -100,6 +102,7 @@ header {
     &__active {
       span {
         transform: rotate(45deg);
+        top: 10px;
         transition: all .5s ease;
         background: #006633;
       }
@@ -123,13 +126,12 @@ header {
   }
 
   .l-menu {
-    margin-left: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     .logo {
-      width: 350px;
+      width: 300px;
     }
 
     .link {
@@ -239,7 +241,8 @@ header {
 
     .l-menu {
       margin: 0;
-      width: 26%;
+      min-width: 26%;
+      max-width: 26%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -254,36 +257,69 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         a {
           font-family: Montserrat;
           font-size: 20px;
           font-weight: 500;
           color: black;
-
         }
-        img {
-          width: 15px;
+      }
+    }
+
+    .c-menu {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 12px;
+
+      .c-menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 50%;
+        padding: 6px;
+
+        .first-lick {
+          width: 100%;
+          color: black;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+
+        .second-link {
+          width: 100%;
+          color: black;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 6px 0;
         }
       }
     }
 
     .r-menu {
-      width: 20%;
+      min-width: 20%;
+      max-width: 20%;
       margin: 0;
       background: white;
-      border-left: 1px #999999 solid;
+      //border-left: 1px #999999 solid;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       padding: 12px;
 
       .r-menu-item {
         width: 100%;
-        margin: auto 0;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 48px;
 
         .contact {
           display: flex;
@@ -394,7 +430,7 @@ header {
 
 
   &-one {
-    grid-column: 1/span 8;
+    grid-column: 1/span 12;
     border-radius: 0 10px 10px 0;
 
     .slide-content {
@@ -416,7 +452,7 @@ header {
         width: 50%;
         height: 100%;
         object-fit: contain;
-        right: 0;
+        right: -10px;
         top: 0;
       }
 
@@ -584,6 +620,8 @@ header {
   .swiper-container-three, .swiper-container-four {
     height: 0;
     position: static;
+    opacity: 0;
+    transition: all .5s ease;
 
     .swiper-wrapper {
       position: static;
@@ -627,6 +665,8 @@ header {
 
   .swiper-active {
     height: 600px;
+    opacity: 1;
+    transition: all .5s ease;
 
     .swiper-button-next, .swiper-button-prev {
       z-index: 20;
@@ -658,6 +698,7 @@ header {
 
 .slide-card {
   display: flex;
+  padding: 24px;
 
   .card {
     border-radius: 10px;
@@ -709,6 +750,14 @@ header {
 
       img {
         width: 20px;
+      }
+    }
+  }
+
+  .card:hover {
+    .card {
+      &__img {
+
       }
     }
   }
@@ -792,8 +841,13 @@ header {
     .card__date {
       width: 100%;
       font-family: Montserrat;
+      font-weight: 500;
       font-size: 15px;
       color: #999999;
+      padding: 6px;
+      animation: .2s forwards no-hover-v ease-in-out;
+      transition: all .2s ease;
+      border-radius: 15px;
     }
 
     .card__text {
@@ -804,6 +858,49 @@ header {
       color: black;
       margin: 24px 0;
     }
+  }
+
+  .announce-card:hover {
+    .card__date {
+      animation: .2s forwards hover-v ease-in-out;
+      color: white;
+      transition: all .2s ease;
+    }
+  }
+}
+
+@keyframes hover-v {
+  0% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,0) 0%, rgba(149,193,31,0) 100%);
+  }
+  25% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.25) 25%, rgba(149,193,31,0) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.50) 50%, rgba(149,193,31,0) 100%);
+  }
+  75% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.75) 75%, rgba(149,193,31,0) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,1) 100%, rgba(149,193,31,0) 100%);
+  }
+}
+@keyframes no-hover-v {
+  0% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,1) 100%, rgba(149,193,31,0) 100%);
+  }
+  25% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.75) 75%, rgba(149,193,31,0) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.50) 50%, rgba(149,193,31,0) 100%);
+  }
+  75% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.25) 25%, rgba(149,193,31,0) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,0) 0%, rgba(149,193,31,0) 100%);
   }
 }
 
@@ -934,6 +1031,7 @@ footer {
         justify-content: space-between;
 
         a {
+          font-family: Montserrat;
           width: 35px;
           height: 35px;
 
@@ -950,10 +1048,12 @@ footer {
         justify-content: flex-start;
 
         span {
+          font-family: Montserrat;
           color: #999999;
         }
 
         a {
+          font-family: Montserrat;
           margin: 0;
         }
       }
@@ -972,7 +1072,8 @@ footer {
     display: flex;
 
     span {
-      width: 60%;
+      font-family: Montserrat;
+      width: 70%;
       color: #999999;
     }
   }

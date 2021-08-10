@@ -49,9 +49,11 @@ header .hamburger {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
   height: 30px;
   cursor: pointer;
+  margin-right: 24px;
 }
 header .hamburger span {
   position: absolute;
@@ -89,6 +91,7 @@ header .hamburger__active {
 }
 header .hamburger__active span {
   transform: rotate(45deg);
+  top: 10px;
   transition: all 0.5s ease;
   background: #006633;
 }
@@ -105,13 +108,12 @@ header .hamburger__active span:after {
   background: #006633;
 }
 header .l-menu {
-  margin-left: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 header .l-menu .logo {
-  width: 350px;
+  width: 300px;
 }
 header .l-menu .link {
   display: flex;
@@ -205,7 +207,8 @@ header .menu {
 }
 header .menu .l-menu {
   margin: 0;
-  width: 26%;
+  min-width: 26%;
+  max-width: 26%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -227,26 +230,54 @@ header .menu .l-menu .l-menu-item a {
   font-weight: 500;
   color: black;
 }
-header .menu .l-menu .l-menu-item img {
-  width: 15px;
+header .menu .c-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+header .menu .c-menu .c-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 6px;
+}
+header .menu .c-menu .c-menu-item .first-lick {
+  width: 100%;
+  color: black;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+header .menu .c-menu .c-menu-item .second-link {
+  width: 100%;
+  color: black;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
 }
 header .menu .r-menu {
-  width: 20%;
+  min-width: 20%;
+  max-width: 20%;
   margin: 0;
   background: white;
-  border-left: 1px #999999 solid;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 12px;
 }
 header .menu .r-menu .r-menu-item {
   width: 100%;
-  margin: auto 0;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 48px;
 }
 header .menu .r-menu .r-menu-item .contact {
   display: flex;
@@ -342,7 +373,7 @@ header .menu__active {
   font-size: 15px;
 }
 .swiper-container-one {
-  grid-column: 1/span 8;
+  grid-column: 1/span 12;
   border-radius: 0 10px 10px 0;
 }
 .swiper-container-one .slide-content {
@@ -363,7 +394,7 @@ header .menu__active {
   width: 50%;
   height: 100%;
   object-fit: contain;
-  right: 0;
+  right: -10px;
   top: 0;
 }
 .swiper-container-one .slide-content__button {
@@ -502,6 +533,8 @@ header .menu__active {
 .details .swiper-container-three, .details .swiper-container-four {
   height: 0;
   position: static;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .details .swiper-container-three .swiper-wrapper, .details .swiper-container-four .swiper-wrapper {
   position: static;
@@ -538,6 +571,8 @@ header .menu__active {
 }
 .details .swiper-active {
   height: 600px;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 .details .swiper-active .swiper-button-next, .details .swiper-active .swiper-button-prev {
   z-index: 20;
@@ -566,6 +601,7 @@ header .menu__active {
 
 .slide-card {
   display: flex;
+  padding: 24px;
 }
 .slide-card .card {
   border-radius: 10px;
@@ -614,7 +650,6 @@ header .menu__active {
 .slide-card .card__arrow img {
   width: 20px;
 }
-
 .announcements {
   grid-column: 1/span 12;
   position: relative;
@@ -682,8 +717,13 @@ header .menu__active {
 .slide-announce .announce-card .card__date {
   width: 100%;
   font-family: Montserrat;
+  font-weight: 500;
   font-size: 15px;
   color: #999999;
+  padding: 6px;
+  animation: 0.2s forwards no-hover-v ease-in-out;
+  transition: all 0.2s ease;
+  border-radius: 15px;
 }
 .slide-announce .announce-card .card__text {
   width: 100%;
@@ -693,7 +733,46 @@ header .menu__active {
   color: black;
   margin: 24px 0;
 }
+.slide-announce .announce-card:hover .card__date {
+  animation: 0.2s forwards hover-v ease-in-out;
+  color: white;
+  transition: all 0.2s ease;
+}
 
+@keyframes hover-v {
+  0% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
+  }
+  25% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.25) 25%, rgba(149, 193, 31, 0) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.5) 50%, rgba(149, 193, 31, 0) 100%);
+  }
+  75% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.75) 75%, rgba(149, 193, 31, 0) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, #95c11f 0%, #95c11f 100%, rgba(149, 193, 31, 0) 100%);
+  }
+}
+@keyframes no-hover-v {
+  0% {
+    background: linear-gradient(90deg, #95c11f 0%, #95c11f 100%, rgba(149, 193, 31, 0) 100%);
+  }
+  25% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.75) 75%, rgba(149, 193, 31, 0) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.5) 50%, rgba(149, 193, 31, 0) 100%);
+  }
+  75% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.25) 25%, rgba(149, 193, 31, 0) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
+  }
+}
 .link-card {
   grid-column-end: span 6;
   position: relative;
@@ -811,6 +890,7 @@ footer .additional-services__item .social-network {
   justify-content: space-between;
 }
 footer .additional-services__item .social-network a {
+  font-family: Montserrat;
   width: 35px;
   height: 35px;
 }
@@ -824,9 +904,11 @@ footer .additional-services__item .contact {
   justify-content: flex-start;
 }
 footer .additional-services__item .contact span {
+  font-family: Montserrat;
   color: #999999;
 }
 footer .additional-services__item .contact a {
+  font-family: Montserrat;
   margin: 0;
 }
 footer .footer-line {
@@ -840,7 +922,8 @@ footer .copyright {
   display: flex;
 }
 footer .copyright span {
-  width: 60%;
+  font-family: Montserrat;
+  width: 70%;
   color: #999999;
 }
 
