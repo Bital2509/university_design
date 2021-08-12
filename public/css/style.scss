@@ -32,6 +32,7 @@ $footerSecondColor: #003319;
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Montserrat;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   padding: 0;
 }
 
+/*Main page and header and footer*/
 .color-line {
   width: 100%;
   height: 5px;
@@ -139,7 +141,6 @@ header {
       align-items: center;
 
       a {
-        font-family: Montserrat;
         font-size: 16px;
         margin: 0 24px;
         color: #999999;
@@ -179,14 +180,12 @@ header {
       margin: 0 12px;
 
       span {
-        font-family: Montserrat;
         font-size: 16px;
         color: #999999;
         font-weight: 500;
       }
 
       a {
-        font-family: Montserrat;
         font-size: 16px;
         color: #999999;
         font-weight: 500;
@@ -259,7 +258,6 @@ header {
         justify-content: space-between;
 
         a {
-          font-family: Montserrat;
           font-size: 20px;
           font-weight: 500;
           color: black;
@@ -285,7 +283,6 @@ header {
         .first-lick {
           width: 100%;
           color: black;
-          font-family: Montserrat;
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 12px;
@@ -294,7 +291,6 @@ header {
         .second-link {
           width: 100%;
           color: black;
-          font-family: Montserrat;
           font-size: 16px;
           font-weight: 500;
           margin: 6px 0;
@@ -328,14 +324,12 @@ header {
           justify-content: flex-start;
 
           .name {
-            font-family: Montserrat;
             font-size: 20px;
             font-weight: 500;
             color: black;
           }
 
           .phone {
-            font-family: Montserrat;
             font-size: 20px;
             font-weight: 500;
             color: #006633;
@@ -344,7 +338,6 @@ header {
           }
 
           .email {
-            font-family: Montserrat;
             font-size: 20px;
             font-weight: 500;
             color: #006633;
@@ -367,15 +360,17 @@ header {
   width: 100%;
   margin: 48px 0;
   padding: 0 100px;
+  display: flex;
+  flex-direction: column;
 
   &-bg-full {
     background: $bgColorFull;
   }
 
   &__title {
-    padding-top: 48px;
-    font-family: Montserrat;
+    //padding-top: 48px;
     font-size: 32px;
+    margin: 24px 0;
     font-weight: bold;
     width: 50%;
   }
@@ -401,7 +396,6 @@ header {
     &__title {
       margin: 48px 0 0 48px;
       font-size: 39px;
-      font-family: Montserrat;
       font-weight: bold;
       width: 35%;
     }
@@ -423,7 +417,6 @@ header {
       border: 0;
       color: white;
       border-radius: 15px;
-      font-family: Montserrat;
       font-size: 15px;
     }
   }
@@ -442,7 +435,6 @@ header {
       &__title {
         margin: 48px 0 0 48px;
         font-size: 39px;
-        font-family: Montserrat;
         font-weight: bold;
         width: 35%;
       }
@@ -464,7 +456,6 @@ header {
         border: 0;
         color: white;
         border-radius: 15px;
-        font-family: Montserrat;
         font-size: 15px;
       }
     }
@@ -604,7 +595,6 @@ header {
     justify-content: flex-start;
 
     a {
-      font-family: Montserrat;
       font-size: 14px;
       color: #95c11f;
       display: flex;
@@ -680,7 +670,7 @@ header {
   padding: 0 0 24px;
   border-bottom: 1px grey solid;
   margin: 0 24px;
-  font-family: Montserrat;
+  font-size: 16px;
 
   &-active {
     color: #95c11f;
@@ -708,6 +698,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    border: 1px #b3b3b3 solid;
+    transition: all .5s ease;
 
     &__img {
       border-radius: 10px 10px 0 0;
@@ -721,21 +713,19 @@ header {
       flex-direction: column;
       padding: 24px;
       height: 100%;
-      border: 1px #b3b3b3 solid;
       border-radius: 0 0 10px 10px;
     }
 
     &__date {
       width: 100%;
-      font-family: Montserrat;
       color: #999999;
       font-size: 15px;
     }
 
     &__text {
       width: 100%;
-      font-size: 26px;
-      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 500;
       color: black;
       line-height: 36px;
       margin: 24px 0;
@@ -747,6 +737,7 @@ header {
       align-items: center;
       justify-content: flex-start;
       margin: auto 0 0;
+      transition: all .5s ease;
 
       img {
         width: 20px;
@@ -755,10 +746,13 @@ header {
   }
 
   .card:hover {
-    .card {
-      &__img {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 10px rgba(153, 153, 153, 0.3);
+    transition: all .5s ease;
 
-      }
+    &__arrow {
+      margin-left: 24px;
+      transition: all .5s ease;
     }
   }
 }
@@ -774,7 +768,6 @@ header {
     justify-content: flex-start;
 
     a {
-      font-family: Montserrat;
       font-size: 14px;
       color: #95c11f;
       display: flex;
@@ -840,7 +833,6 @@ header {
 
     .card__date {
       width: 100%;
-      font-family: Montserrat;
       font-weight: 500;
       font-size: 15px;
       color: #999999;
@@ -852,8 +844,8 @@ header {
 
     .card__text {
       width: 100%;
-      font-family: Montserrat;
-      font-size: 26px;
+      font-size: 18px;
+      font-weight: 500;
       line-height: 36px;
       color: black;
       margin: 24px 0;
@@ -871,36 +863,73 @@ header {
 
 @keyframes hover-v {
   0% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,0) 0%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
   }
-  25% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.25) 25%, rgba(149,193,31,0) 100%);
+  10% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .1) 10%, rgba(149, 193, 31, 0) 100%);
+  }
+  20% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .2) 20%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .3) 30%, rgba(149, 193, 31, 0) 100%);
+  }
+  40% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .4) 40%, rgba(149, 193, 31, 0) 100%);
   }
   50% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.50) 50%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .5) 50%, rgba(149, 193, 31, 0) 100%);
   }
-  75% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.75) 75%, rgba(149,193,31,0) 100%);
+  60% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .6) 60%, rgba(149, 193, 31, 0) 100%);
+  }
+  70% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .7) 70%, rgba(149, 193, 31, 0) 100%);
+  }
+  80% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .8) 80%, rgba(149, 193, 31, 0) 100%);
+  }
+  90% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .9) 90%, rgba(149, 193, 31, 0) 100%);
   }
   100% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,1) 100%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, 1) 100%, rgba(149, 193, 31, 0) 100%);
   }
 }
+
 @keyframes no-hover-v {
   0% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,1) 100%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, 1) 100%, rgba(149, 193, 31, 0) 100%);
   }
-  25% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.75) 75%, rgba(149,193,31,0) 100%);
+  10% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .9) 90%, rgba(149, 193, 31, 0) 100%);
+  }
+  20% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .8) 80%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .7) 70%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .6) 60%, rgba(149, 193, 31, 0) 100%);
   }
   50% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.50) 50%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .5) 50%, rgba(149, 193, 31, 0) 100%);
   }
-  75% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,.25) 25%, rgba(149,193,31,0) 100%);
+  60% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .4) 40%, rgba(149, 193, 31, 0) 100%);
+  }
+  70% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .3) 30%, rgba(149, 193, 31, 0) 100%);
+  }
+  80% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .2) 20%, rgba(149, 193, 31, 0) 100%);
+  }
+  90% {
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, .1) 10%, rgba(149, 193, 31, 0) 100%);
   }
   100% {
-    background: linear-gradient(90deg, rgba(149,193,31,1) 0%, rgba(149,193,31,0) 0%, rgba(149,193,31,0) 100%);
+    background: linear-gradient(90deg, rgba(149, 193, 31, 1) 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
   }
 }
 
@@ -916,10 +945,10 @@ header {
   justify-content: flex-start;
   color: black;
   padding: 48px;
+  transition: all .5s ease;
 
 
   &__title {
-    font-family: Montserrat;
     font-size: 24px;
     font-weight: bold;
     width: 60%;
@@ -928,7 +957,6 @@ header {
 
   &__text {
     z-index: 1;
-    font-family: Montserrat;
     font-size: 17px;
     font-weight: bold;
     width: 50%;
@@ -945,6 +973,12 @@ header {
     height: 80%;
     z-index: 0;
   }
+}
+
+.link-card:hover {
+  box-shadow: 5px 5px 10px 0 rgba(153, 153, 153, .3);
+  transform: scale(1.02);
+  transition: all .5s ease;
 }
 
 .link-card:nth-child(1) {
@@ -988,7 +1022,6 @@ footer {
       color: white;
 
       .item__title {
-        font-family: Montserrat;
         font-size: 16px;
         margin: 24px 0;
         font-weight: bold;
@@ -997,7 +1030,6 @@ footer {
       a {
         color: #ffffff;
         opacity: .7;
-        font-family: Montserrat;
         font-size: 15px;
         margin: 6px 0;
       }
@@ -1019,7 +1051,6 @@ footer {
 
       a {
         color: #999999;
-        font-family: Montserrat;
         font-size: 15px;
         margin: 12px 0;
       }
@@ -1031,7 +1062,6 @@ footer {
         justify-content: space-between;
 
         a {
-          font-family: Montserrat;
           width: 35px;
           height: 35px;
 
@@ -1048,12 +1078,10 @@ footer {
         justify-content: flex-start;
 
         span {
-          font-family: Montserrat;
           color: #999999;
         }
 
         a {
-          font-family: Montserrat;
           margin: 0;
         }
       }
@@ -1072,9 +1100,137 @@ footer {
     display: flex;
 
     span {
-      font-family: Montserrat;
       width: 70%;
       color: #999999;
     }
   }
+}
+
+/*Main page and header and footer*/
+
+/*Internal pages of the second order*/
+.bread-crumbs {
+  width: 100%;
+  padding: 0 100px;
+  margin: 48px 0 0;
+
+  span {
+    font-size: 16px;
+    margin: 0 12px;
+    color: #999999;
+  }
+
+  a {
+    font-size: 16px;
+    color: #999999;
+  }
+}
+
+.institute-block {
+  grid-column: 1/ span 12;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  transition: all .5s ease;
+
+  &__img {
+    position: relative;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bgColorFull;
+    border-radius: 15px;
+    padding: 48px;
+    transition: all .5s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .arrow {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 24px;
+      bottom: 24px;
+    }
+  }
+
+  &__content {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 48px;
+
+    .name {
+      font-size: 26px;
+      color: #999999;
+      font-weight: 400;
+    }
+
+    .title {
+      width: 80%;
+      font-size: 26px;
+      color: black;
+      font-weight: bolder;
+    }
+
+    .content__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 12px 0;
+
+      .item__color {
+        color: #95c11f;
+      }
+
+      span {
+        font-size: 16px;
+        color: #999999;
+        font-weight: bold;
+        width: 150px;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: bold;
+        color: #999999;
+      }
+    }
+
+    .content__button {
+      padding: 24px 48px;
+      background: #006633;
+      border-radius: 15px;
+      color: white;
+      margin: auto 0 0;
+    }
+  }
+}
+
+.institute-block:hover {
+  box-shadow: 5px 5px 10px 0 rgba(153, 153, 153, .3);
+  transition: all .5s ease;
+
+  .institute-block__img {
+    background: #e5e7ee;
+    transition: all .5s ease;
+  }
+}
+
+/*Internal pages of the second order*/
+
+.offset-top__24{
+  margin-top: 24px;
 }

@@ -22,6 +22,7 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Montserrat;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   padding: 0;
 }
 
+/*Main page and header and footer*/
 .color-line {
   width: 100%;
   height: 5px;
@@ -120,7 +122,6 @@ header .l-menu .link {
   align-items: center;
 }
 header .l-menu .link a {
-  font-family: Montserrat;
   font-size: 16px;
   margin: 0 24px;
   color: #999999;
@@ -154,13 +155,11 @@ header .r-menu .language {
   margin: 0 12px;
 }
 header .r-menu .language span {
-  font-family: Montserrat;
   font-size: 16px;
   color: #999999;
   font-weight: 500;
 }
 header .r-menu .language a {
-  font-family: Montserrat;
   font-size: 16px;
   color: #999999;
   font-weight: 500;
@@ -225,7 +224,6 @@ header .menu .l-menu .l-menu-item {
   justify-content: space-between;
 }
 header .menu .l-menu .l-menu-item a {
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   color: black;
@@ -248,7 +246,6 @@ header .menu .c-menu .c-menu-item {
 header .menu .c-menu .c-menu-item .first-lick {
   width: 100%;
   color: black;
-  font-family: Montserrat;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -256,7 +253,6 @@ header .menu .c-menu .c-menu-item .first-lick {
 header .menu .c-menu .c-menu-item .second-link {
   width: 100%;
   color: black;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   margin: 6px 0;
@@ -286,13 +282,11 @@ header .menu .r-menu .r-menu-item .contact {
   justify-content: flex-start;
 }
 header .menu .r-menu .r-menu-item .contact .name {
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   color: black;
 }
 header .menu .r-menu .r-menu-item .contact .phone {
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   color: #006633;
@@ -300,7 +294,6 @@ header .menu .r-menu .r-menu-item .contact .phone {
   padding: 0;
 }
 header .menu .r-menu .r-menu-item .contact .email {
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   color: #006633;
@@ -317,14 +310,15 @@ header .menu__active {
   width: 100%;
   margin: 48px 0;
   padding: 0 100px;
+  display: flex;
+  flex-direction: column;
 }
 .section-bg-full {
   background: #f3f6fb;
 }
 .section__title {
-  padding-top: 48px;
-  font-family: Montserrat;
   font-size: 32px;
+  margin: 24px 0;
   font-weight: bold;
   width: 50%;
 }
@@ -349,7 +343,6 @@ header .menu__active {
 .swiper-container .slide-content__title {
   margin: 48px 0 0 48px;
   font-size: 39px;
-  font-family: Montserrat;
   font-weight: bold;
   width: 35%;
 }
@@ -369,7 +362,6 @@ header .menu__active {
   border: 0;
   color: white;
   border-radius: 15px;
-  font-family: Montserrat;
   font-size: 15px;
 }
 .swiper-container-one {
@@ -385,7 +377,6 @@ header .menu__active {
 .swiper-container-one .slide-content__title {
   margin: 48px 0 0 48px;
   font-size: 39px;
-  font-family: Montserrat;
   font-weight: bold;
   width: 35%;
 }
@@ -405,7 +396,6 @@ header .menu__active {
   border: 0;
   color: white;
   border-radius: 15px;
-  font-family: Montserrat;
   font-size: 15px;
 }
 .swiper-container-one .swiper-pagination {
@@ -520,7 +510,6 @@ header .menu__active {
   justify-content: flex-start;
 }
 .details .link-more a {
-  font-family: Montserrat;
   font-size: 14px;
   color: #95c11f;
   display: flex;
@@ -584,7 +573,7 @@ header .menu__active {
   padding: 0 0 24px;
   border-bottom: 1px grey solid;
   margin: 0 24px;
-  font-family: Montserrat;
+  font-size: 16px;
 }
 .menu__button-active {
   color: #95c11f;
@@ -611,6 +600,8 @@ header .menu__active {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  border: 1px #b3b3b3 solid;
+  transition: all 0.5s ease;
 }
 .slide-card .card__img {
   border-radius: 10px 10px 0 0;
@@ -623,19 +614,17 @@ header .menu__active {
   flex-direction: column;
   padding: 24px;
   height: 100%;
-  border: 1px #b3b3b3 solid;
   border-radius: 0 0 10px 10px;
 }
 .slide-card .card__date {
   width: 100%;
-  font-family: Montserrat;
   color: #999999;
   font-size: 15px;
 }
 .slide-card .card__text {
   width: 100%;
-  font-size: 26px;
-  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
   color: black;
   line-height: 36px;
   margin: 24px 0;
@@ -646,10 +635,21 @@ header .menu__active {
   align-items: center;
   justify-content: flex-start;
   margin: auto 0 0;
+  transition: all 0.5s ease;
 }
 .slide-card .card__arrow img {
   width: 20px;
 }
+.slide-card .card:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px rgba(153, 153, 153, 0.3);
+  transition: all 0.5s ease;
+}
+.slide-card .card:hover__arrow {
+  margin-left: 24px;
+  transition: all 0.5s ease;
+}
+
 .announcements {
   grid-column: 1/span 12;
   position: relative;
@@ -661,7 +661,6 @@ header .menu__active {
   justify-content: flex-start;
 }
 .announcements .link-more a {
-  font-family: Montserrat;
   font-size: 14px;
   color: #95c11f;
   display: flex;
@@ -716,7 +715,6 @@ header .menu__active {
 }
 .slide-announce .announce-card .card__date {
   width: 100%;
-  font-family: Montserrat;
   font-weight: 500;
   font-size: 15px;
   color: #999999;
@@ -727,8 +725,8 @@ header .menu__active {
 }
 .slide-announce .announce-card .card__text {
   width: 100%;
-  font-family: Montserrat;
-  font-size: 26px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 36px;
   color: black;
   margin: 24px 0;
@@ -743,14 +741,32 @@ header .menu__active {
   0% {
     background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
   }
-  25% {
-    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.25) 25%, rgba(149, 193, 31, 0) 100%);
+  10% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.1) 10%, rgba(149, 193, 31, 0) 100%);
+  }
+  20% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.2) 20%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.3) 30%, rgba(149, 193, 31, 0) 100%);
+  }
+  40% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.4) 40%, rgba(149, 193, 31, 0) 100%);
   }
   50% {
     background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.5) 50%, rgba(149, 193, 31, 0) 100%);
   }
-  75% {
-    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.75) 75%, rgba(149, 193, 31, 0) 100%);
+  60% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.6) 60%, rgba(149, 193, 31, 0) 100%);
+  }
+  70% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.7) 70%, rgba(149, 193, 31, 0) 100%);
+  }
+  80% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.8) 80%, rgba(149, 193, 31, 0) 100%);
+  }
+  90% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.9) 90%, rgba(149, 193, 31, 0) 100%);
   }
   100% {
     background: linear-gradient(90deg, #95c11f 0%, #95c11f 100%, rgba(149, 193, 31, 0) 100%);
@@ -760,14 +776,32 @@ header .menu__active {
   0% {
     background: linear-gradient(90deg, #95c11f 0%, #95c11f 100%, rgba(149, 193, 31, 0) 100%);
   }
-  25% {
-    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.75) 75%, rgba(149, 193, 31, 0) 100%);
+  10% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.9) 90%, rgba(149, 193, 31, 0) 100%);
+  }
+  20% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.8) 80%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.7) 70%, rgba(149, 193, 31, 0) 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.6) 60%, rgba(149, 193, 31, 0) 100%);
   }
   50% {
     background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.5) 50%, rgba(149, 193, 31, 0) 100%);
   }
-  75% {
-    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.25) 25%, rgba(149, 193, 31, 0) 100%);
+  60% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.4) 40%, rgba(149, 193, 31, 0) 100%);
+  }
+  70% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.3) 30%, rgba(149, 193, 31, 0) 100%);
+  }
+  80% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.2) 20%, rgba(149, 193, 31, 0) 100%);
+  }
+  90% {
+    background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0.1) 10%, rgba(149, 193, 31, 0) 100%);
   }
   100% {
     background: linear-gradient(90deg, #95c11f 0%, rgba(149, 193, 31, 0) 0%, rgba(149, 193, 31, 0) 100%);
@@ -784,9 +818,9 @@ header .menu__active {
   justify-content: flex-start;
   color: black;
   padding: 48px;
+  transition: all 0.5s ease;
 }
 .link-card__title {
-  font-family: Montserrat;
   font-size: 24px;
   font-weight: bold;
   width: 60%;
@@ -794,7 +828,6 @@ header .menu__active {
 }
 .link-card__text {
   z-index: 1;
-  font-family: Montserrat;
   font-size: 17px;
   font-weight: bold;
   width: 50%;
@@ -809,6 +842,12 @@ header .menu__active {
   width: 50%;
   height: 80%;
   z-index: 0;
+}
+
+.link-card:hover {
+  box-shadow: 5px 5px 10px 0 rgba(153, 153, 153, 0.3);
+  transform: scale(1.02);
+  transition: all 0.5s ease;
 }
 
 .link-card:nth-child(1) {
@@ -852,7 +891,6 @@ footer .footer-menu__item {
   color: white;
 }
 footer .footer-menu__item .item__title {
-  font-family: Montserrat;
   font-size: 16px;
   margin: 24px 0;
   font-weight: bold;
@@ -860,7 +898,6 @@ footer .footer-menu__item .item__title {
 footer .footer-menu__item a {
   color: #ffffff;
   opacity: 0.7;
-  font-family: Montserrat;
   font-size: 15px;
   margin: 6px 0;
 }
@@ -879,7 +916,6 @@ footer .additional-services__item {
 }
 footer .additional-services__item a {
   color: #999999;
-  font-family: Montserrat;
   font-size: 15px;
   margin: 12px 0;
 }
@@ -890,7 +926,6 @@ footer .additional-services__item .social-network {
   justify-content: space-between;
 }
 footer .additional-services__item .social-network a {
-  font-family: Montserrat;
   width: 35px;
   height: 35px;
 }
@@ -904,11 +939,9 @@ footer .additional-services__item .contact {
   justify-content: flex-start;
 }
 footer .additional-services__item .contact span {
-  font-family: Montserrat;
   color: #999999;
 }
 footer .additional-services__item .contact a {
-  font-family: Montserrat;
   margin: 0;
 }
 footer .footer-line {
@@ -922,9 +955,121 @@ footer .copyright {
   display: flex;
 }
 footer .copyright span {
-  font-family: Montserrat;
   width: 70%;
   color: #999999;
+}
+
+/*Main page and header and footer*/
+/*Internal pages of the second order*/
+.bread-crumbs {
+  width: 100%;
+  padding: 0 100px;
+  margin: 48px 0 0;
+}
+.bread-crumbs span {
+  font-size: 16px;
+  margin: 0 12px;
+  color: #999999;
+}
+.bread-crumbs a {
+  font-size: 16px;
+  color: #999999;
+}
+
+.institute-block {
+  grid-column: 1/span 12;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  transition: all 0.5s ease;
+}
+.institute-block__img {
+  position: relative;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f6fb;
+  border-radius: 15px;
+  padding: 48px;
+  transition: all 0.5s ease;
+}
+.institute-block__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.institute-block__img .arrow {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 24px;
+  bottom: 24px;
+}
+.institute-block__content {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 48px;
+}
+.institute-block__content .name {
+  font-size: 26px;
+  color: #999999;
+  font-weight: 400;
+}
+.institute-block__content .title {
+  width: 80%;
+  font-size: 26px;
+  color: black;
+  font-weight: bolder;
+}
+.institute-block__content .content__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 12px 0;
+}
+.institute-block__content .content__item .item__color {
+  color: #95c11f;
+}
+.institute-block__content .content__item span {
+  font-size: 16px;
+  color: #999999;
+  font-weight: bold;
+  width: 150px;
+}
+.institute-block__content .content__item a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+}
+.institute-block__content .content__button {
+  padding: 24px 48px;
+  background: #006633;
+  border-radius: 15px;
+  color: white;
+  margin: auto 0 0;
+}
+
+.institute-block:hover {
+  box-shadow: 5px 5px 10px 0 rgba(153, 153, 153, 0.3);
+  transition: all 0.5s ease;
+}
+.institute-block:hover .institute-block__img {
+  background: #e5e7ee;
+  transition: all 0.5s ease;
+}
+
+/*Internal pages of the second order*/
+.offset-top__24 {
+  margin-top: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
