@@ -22,6 +22,7 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Montserrat;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
   background: #84c552;
 }
 
+/*Main page and header and footer*/
 header {
   width: 100%;
   height: 70px;
@@ -52,7 +54,6 @@ header .menu {
 }
 header .menu a {
   font-size: 14px;
-  font-family: Montserrat;
   color: #888b8e;
 }
 header .additional-links {
@@ -75,7 +76,6 @@ header .additional-links .social-network a img {
   width: 100%;
 }
 header .additional-links .language {
-  font-family: Montserrat;
   color: #888b8e;
 }
 header .additional-links .eye {
@@ -123,7 +123,6 @@ header .additional-links .search img {
   justify-content: center;
 }
 .second-header__block .contact__block span {
-  font-family: Montserrat;
   font-size: 14px;
   color: #888b8e;
   opacity: 0.7;
@@ -136,7 +135,6 @@ header .additional-links .search img {
   z-index: 2;
 }
 .second-header__block .drop-down-menu a {
-  font-family: Montserrat;
   font-weight: bold;
   color: black;
   cursor: pointer;
@@ -192,7 +190,6 @@ header .additional-links .search img {
 }
 .second-header__block .drop-down-menu ul li .drop-item__column .column__title {
   font-size: 16px;
-  font-family: Montserrat;
   font-weight: bold;
   color: #95c11f;
   margin: 12px 0;
@@ -215,18 +212,22 @@ header .additional-links .search img {
   padding: 24px 100px;
   z-index: 2;
 }
+.second-header__border-bottom {
+  padding-bottom: 24px;
+  border-bottom: 1px #999999 solid;
+}
 
 .section {
   width: 100%;
   margin: 48px 0;
   padding: 0 100px;
+  display: flex;
+  flex-direction: column;
 }
 .section-bg-full {
   background: #f3f6fb;
 }
 .section__title {
-  padding-top: 48px;
-  font-family: Montserrat;
   font-size: 32px;
   font-weight: bold;
   width: 50%;
@@ -252,7 +253,6 @@ header .additional-links .search img {
 .swiper-container .slide-content__title {
   margin: 48px 0 0 48px;
   font-size: 39px;
-  font-family: Montserrat;
   font-weight: bold;
   width: 35%;
 }
@@ -272,7 +272,6 @@ header .additional-links .search img {
   border: 0;
   color: white;
   border-radius: 15px;
-  font-family: Montserrat;
   font-size: 15px;
 }
 .swiper-container-one {
@@ -288,7 +287,6 @@ header .additional-links .search img {
 .swiper-container-one .slide-content__title {
   margin: 48px 0 0 48px;
   font-size: 39px;
-  font-family: Montserrat;
   font-weight: bold;
   width: 35%;
 }
@@ -308,7 +306,6 @@ header .additional-links .search img {
   border: 0;
   color: white;
   border-radius: 15px;
-  font-family: Montserrat;
   font-size: 15px;
 }
 .swiper-container-one .swiper-pagination {
@@ -423,7 +420,6 @@ header .additional-links .search img {
   justify-content: flex-start;
 }
 .details .link-more a {
-  font-family: Montserrat;
   font-size: 14px;
   color: #95c11f;
   display: flex;
@@ -483,7 +479,7 @@ header .additional-links .search img {
   padding: 0 0 24px;
   border-bottom: 1px grey solid;
   margin: 0 24px;
-  font-family: Montserrat;
+  cursor: pointer;
 }
 .menu__button-active {
   color: #95c11f;
@@ -526,14 +522,12 @@ header .additional-links .search img {
 }
 .slide-card .card__date {
   width: 100%;
-  font-family: Montserrat;
   color: #999999;
   font-size: 15px;
 }
 .slide-card .card__text {
   width: 100%;
   font-size: 26px;
-  font-family: Montserrat;
   color: black;
   line-height: 36px;
   margin: 24px 0;
@@ -560,7 +554,6 @@ header .additional-links .search img {
   justify-content: flex-start;
 }
 .announcements .link-more a {
-  font-family: Montserrat;
   font-size: 14px;
   color: #95c11f;
   display: flex;
@@ -615,13 +608,11 @@ header .additional-links .search img {
 }
 .slide-announce .announce-card .card__date {
   width: 100%;
-  font-family: Montserrat;
   font-size: 15px;
   color: #999999;
 }
 .slide-announce .announce-card .card__text {
   width: 100%;
-  font-family: Montserrat;
   font-size: 26px;
   line-height: 36px;
   color: black;
@@ -641,7 +632,6 @@ header .additional-links .search img {
   padding: 48px;
 }
 .link-card__title {
-  font-family: Montserrat;
   font-size: 24px;
   font-weight: bold;
   width: 60%;
@@ -649,7 +639,6 @@ header .additional-links .search img {
 }
 .link-card__text {
   z-index: 1;
-  font-family: Montserrat;
   font-size: 17px;
   font-weight: bold;
   width: 50%;
@@ -707,7 +696,6 @@ footer .footer-menu__item {
   color: white;
 }
 footer .footer-menu__item .item__title {
-  font-family: Montserrat;
   font-size: 16px;
   margin: 24px 0;
   font-weight: bold;
@@ -715,7 +703,6 @@ footer .footer-menu__item .item__title {
 footer .footer-menu__item a {
   color: #ffffff;
   opacity: 0.7;
-  font-family: Montserrat;
   font-size: 15px;
   margin: 6px 0;
 }
@@ -734,7 +721,6 @@ footer .additional-services__item {
 }
 footer .additional-services__item a {
   color: #999999;
-  font-family: Montserrat;
   font-size: 15px;
   margin: 12px 0;
 }
@@ -777,5 +763,244 @@ footer .copyright span {
   width: 60%;
   color: #999999;
 }
+
+/*Main page and header and footer*/
+/*Third order page*/
+.bread-crumbs {
+  width: 100%;
+  display: flex;
+  padding: 0 100px;
+  margin: 48px 0;
+}
+.bread-crumbs a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #999999;
+}
+.bread-crumbs span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #999999;
+  margin: 0 12px;
+}
+
+.institute {
+  display: flex;
+  justify-content: space-between;
+}
+.institute .institute-block {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.institute .institute-block .title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 0 0 48px;
+}
+.institute .institute-block_content-block {
+  display: flex;
+  flex-direction: column;
+}
+.institute .institute-block_content-block .director-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #f3f6fb;
+  border-radius: 15px;
+}
+.institute .institute-block_content-block .director-card img {
+  width: 200px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+.institute .institute-block_content-block .director-card .director-data {
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.institute .institute-block_content-block .director-card .director-data .data__item {
+  display: flex;
+  width: 100%;
+  margin: 12px;
+}
+.institute .institute-block_content-block .director-card .director-data .data__item .color-link {
+  color: #95c11f;
+}
+.institute .institute-block_content-block .director-card .director-data .data__item span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+  width: 250px;
+}
+.institute .institute-block_content-block .director-card .director-data .data__item span:nth-child(2) {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+.institute .institute-block_content-block .director-card .director-data .data__item a {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+.institute .institute-block_content-block .directions-of-training {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  color: black;
+}
+.institute .institute-block_content-block .directions-of-training .title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 48px 0;
+}
+.institute .institute-block_content-block .directions-of-training .sub-title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 0 24px;
+}
+.institute .institute-block_content-block .directions-of-training__item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin: 12px 0;
+}
+.institute .institute-block_content-block .directions-of-training__item .number {
+  color: #95c11f;
+  font-weight: 500;
+  min-width: 100px;
+  max-width: 100px;
+}
+.institute .institute-block_content-block .directions-of-training__item .text {
+  font-weight: 400;
+}
+.institute .institute-block_content-block .obout-us {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  color: black;
+}
+.institute .institute-block_content-block .obout-us .title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 48px 0;
+}
+.institute .institute-block_content-block .obout-us .video {
+  width: 100%;
+}
+.institute .institute-block_content-block .obout-us .video iframe {
+  width: 100%;
+  height: 500px;
+}
+.institute .institute-block_content-block .obout-us .text {
+  margin: 48px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.institute .institute-block_content-block .work-time {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  color: black;
+}
+.institute .institute-block_content-block .work-time .title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 48px 0;
+}
+.institute .institute-block_content-block .work-time .text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.institute .institute-block_content-block .staff-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.institute .institute-block_content-block .staff-block .card-staff {
+  width: 48%;
+  background: #f3f6fb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 24px 0;
+  border-radius: 15px;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item {
+  display: flex;
+  align-items: flex-start;
+  margin: 12px 0;
+  font-size: 16px;
+  color: black;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item .color-link {
+  color: #95c11f;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item span:nth-child(1) {
+  min-width: 120px;
+  font-weight: 600;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item a {
+  font-size: 16px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item a span {
+  font-size: 16px;
+  color: black;
+  font-weight: normal !important;
+  margin: 6px 0;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item a span:first-child {
+  margin: 0 0 6px;
+}
+.institute .institute-block_content-block .staff-block .card-staff .card__item a span:last-child {
+  margin: 6px 0 0;
+}
+.institute .institute-block_content-block .network-link {
+  display: flex;
+  flex-direction: column;
+}
+.institute .institute-block_content-block .network-link a {
+  font-size: 18px;
+  color: #95c11f;
+  margin: 12px 0;
+}
+.institute .institute-block__active {
+  height: auto;
+  width: 59%;
+}
+.institute__submenu {
+  display: flex;
+  flex-direction: column;
+  width: 39%;
+}
+.institute__submenu .submenu__title {
+  font-size: 26px;
+  font-weight: bolder;
+  color: black;
+  margin: 0 0 12px;
+}
+.institute__submenu .submenu-link {
+  font-size: 18px;
+  color: #95c11f;
+  margin: 12px 0;
+}
+
+/*Third order page*/
 
 /*# sourceMappingURL=style.css.map */
